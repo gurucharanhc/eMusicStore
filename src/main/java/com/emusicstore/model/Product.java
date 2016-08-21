@@ -1,7 +1,7 @@
 package com.emusicstore.model;
 
 /**
- * Created by Le on 1/2/2016.
+ * Created by gurucharan
  */
 public class Product {
 

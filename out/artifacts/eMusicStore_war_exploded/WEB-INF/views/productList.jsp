@@ -1,4 +1,5 @@
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@include file="/WEB-INF/views/templates/MainHeader.jsp"%>
 <!-- Marketing messaging and featurettes
 ================================================== -->
@@ -8,7 +9,7 @@
     <div class="container">
         <div class="page-header">
             <h1>Music Collection</h1>
-            <p class="lead">Checkout all the awesome Music available now</p>
+            <p class="lead">Checkout the awesome Music available now</p>
         </div>
 
         <table class="table table-striped table-hover">
@@ -19,6 +20,7 @@
                     <th>Category</th>
                     <th>Condition</th>
                     <th>Price</th>
+                    <th>Info</th>
                 </tr>
             </thead>
             <c:forEach items="${products}" var="product">
@@ -28,7 +30,8 @@
                     <td>${product.productCategory}</td>
                     <td>${product.productCondition}</td>
                     <td>${product.productPrice} USD</td>
-                    <td><span class="glyphicon glyphicon-info-sign"/></td>
+                    <td><a href="<spring:url value="/productList/viewProduct/${product.productId}"/>">
+                        <span class="glyphicon glyphicon-info-sign"/></a></td>
                 </tr>
             </c:forEach>
         </table>
