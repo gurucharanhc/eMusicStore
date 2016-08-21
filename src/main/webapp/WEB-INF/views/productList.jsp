@@ -9,7 +9,7 @@
     <div class="container">
         <div class="page-header">
             <h1>Music Collection</h1>
-            <p class="lead">Checkout all the awesome Music available now</p>
+            <p class="lead">Checkout the awesome Music available now</p>
         </div>
 
         <table class="table table-striped table-hover">
@@ -30,7 +30,8 @@
                     <td>${product.productCategory}</td>
                     <td>${product.productCondition}</td>
                     <td>${product.productPrice} USD</td>
-                    <td><a href="<spring:url value="/productList/viewProduct/${product.productId}"/>"></a><span class="glyphicon glyphicon-info-sign"/></td>
+                    <td><a href="<spring:url value="/productList/viewProduct/${product.productId}"/>">
+                        <span class="glyphicon glyphicon-info-sign"/></a></td>
                 </tr>
             </c:forEach>
         </table>

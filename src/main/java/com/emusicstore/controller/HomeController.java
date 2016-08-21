@@ -7,10 +7,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.io.IOException;
 import java.util.List;
 
 /**
- *
+ * Created by gurucharan
  */
 @Controller
 public class HomeController {
@@ -32,9 +33,8 @@ public class HomeController {
     }
 
     @RequestMapping("/productList/viewProduct/{productId}")
-    public String viewProduct(@PathVariable String productId, Model model){
-        Product product=null ;
-        //= productDao.getProductById(productId);
+    public String viewProduct(@PathVariable String productId, Model model) throws IOException{
+        Product product=productDao.getProductById(productId);
         model.addAttribute(product);
         return "viewProduct";
     }

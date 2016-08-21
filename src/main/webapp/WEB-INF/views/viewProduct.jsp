@@ -17,11 +17,11 @@
                     <img scr="#" alt="image" style="width:100%; height: 300px" />
                 </div>
                 <div class="col-md-5">
-                    <h3>Music Name</h3>
-                    <p>Music Description</p>
-                    <p>Category</p>
-                    <p>Condition</p>
-                    <p>Price</p>
+                    <h3>${product.productName}</h3>
+                    <p>${product.productDescription}</p>
+                    <p><Strong>Category</Strong> : ${product.productCategory}</p>
+                    <p><Strong>Condition</Strong> : ${product.productCondition}</p>
+                    <p><Strong>Price</Strong> : ${product.productPrice} USD</p>
                  </div>
             </div>
          </div>
