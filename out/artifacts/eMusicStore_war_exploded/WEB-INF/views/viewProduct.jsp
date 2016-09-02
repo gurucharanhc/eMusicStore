@@ -21,7 +21,7 @@
                     <p>${product.productDescription}</p>
                     <p><Strong>Category</Strong> : ${product.productCategory}</p>
                     <p><Strong>Condition</Strong> : ${product.productCondition}</p>
-                    <p><Strong>Price</Strong> : ${product.productPrice}</p>
+                    <p><Strong>Price</Strong> : ${product.productPrice} USD</p>
                  </div>
             </div>
          </div>
